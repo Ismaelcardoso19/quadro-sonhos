@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    color: #080fe3;
+    background: #d6d3d1;
+}
+
+/* Header */
+header {
+    padding: 60px 20px 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+header p {
+    color: #78716c;
+    margin-top: 8px;
+}
+
+/* Formulário */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+}
+
+.form-container form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.form-container input {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px 16px;
+    border: 1px solid #e7e5e4;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.form-container input:focus {
+    outline: none;
+    border-color: #a8a29e;
+}
+
+.form-container button {
+    padding: 12px 24px;
+    background: #292524;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background: #44403c;
+}
+
+/* Main */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+}
+
+.estado-vazio {
+    text-align: center;
+    padding: 80px 20px;
+    color: #a8a29e;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Grid */
+.grid-sonhos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+/* Card */
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: -8 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-imagem {
+    position: relative;
+    aspect-ratio: 4/3;
+}
+
+.card-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-imagem.conquistado img {
+    opacity: 0.8;
+}
+
+/* Botão remover */
+.btn-remover {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    background: rgba(238, 13, 13, 0.9);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s;
+    display: grid;
+    place-items: center;
+}
+
+.card:hover .btn-remover {
+    opacity: 1;
+}
+
+.btn-remover svg {
+    width: 14px;
+    height: 14px;
+    color: #78716c;
+}
+
+/* Conteúdo */
+.card-conteudo {
+    padding: 16px;
+}
+
+.card-conteudo h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.card-conteudo h3.conquistado {
+    text-decoration: line-through;
+    color: #a8a29e;
+}
+
+/* Botão status */
+.btn-status {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-status.sonho {
+    background: #f5f5f4;
+    color: #57534e;
+}
+
+.btn-status.progresso {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.btn-status.conquistado {
+    background: #d1fae5;
+    color: #0de6a8;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #07ef83;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+
+    body{
+        max-width: 500px;
+        max-height: 500px;
+    }
+
+    header {
+        padding: 40px 20px 20px;
+    }
+
+    .form-container {
+        padding: 0 20px 20px;
+    }
+
+    main {
+        padding: 0 20px 40px;
+        max-width: 500px;
+        max-height: 500px;
+    }
+
+    .estado-vazio {
+        padding: 40px 20px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    .card-conteudo {
+        padding: 16px;
+        padding-bottom: 20%;
+        width: 50px;
+        height: 50px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .form-container input {
+        font-size: 15px;
+    }
+
+    .form-container button {
+        font-size: 15px;
+    }
+
+    .card-conteudo h3 {
+        font-size: 14px;
+    }
+
+    .grid-sonhos {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+    }
+}
+
+@media (max-width: 300px) {
+    header {
+        padding: 20px 10px 10px;
+    }
+
+    .form-container {
+        padding: 0 10px 10px;
+    }
+
+    main {
+        padding: 0 10px 20px;
+    }
+
+    .estado-vazio {
+        padding: 20px 10px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    .card-conteudo {
+        padding: 8px;
+    }
+
+    .form-container form {
+        flex-direction: column;
+    }
+
+    .form-container button {
+        width: 100%;
+        height: 48px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .form-container input {
+        font-size: 14px;
+    }
+
+    .form-container button {
+        font-size: 14px;
+    }
+
+    .card-conteudo h3 {
+        font-size: 12px;
+    }
+
+    .grid-sonhos {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 10px;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadro dos Sonhos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Quadro dos Sonhos</h1>
+        <p>Visualize. Acredite. Conquiste.</p>
+    </header>
+
+    <!-- Formulário -->
+    <section class="form-container">
+        <form id="dream-form">
+            <input type="url" id="image-url" placeholder="URL da imagem" list="url-options" required>
+            <datalist id="url-options">
+                
+                
+            </datalist>
+            <input type="text" id="dream-title" placeholder="Seu sonho" required>
+            <button type="submit">Adicionar</button>
+        </form>
+    </section>
+
+    <!-- Grid de Sonhos -->
+    <main>
+        <!-- Estado vazio -->
+        <div id="empty-state" class="estado-vazio hidden">
+            <p>Adicione seu primeiro sonho</p>
+        </div>
+
+        <!-- Grid dos cards -->
+        <div id="dreams-grid" class="grid-sonhos">
+            <!-- Cards via JavaScript -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>QUADRO DOS SONHOS: Make your dream bigger than you 🙂</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
