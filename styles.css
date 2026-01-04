@@ -203,7 +203,6 @@ footer {
 
     body{
         max-width: 500px;
-        max-height: 500px;
     }
 
     header {
@@ -217,7 +216,6 @@ footer {
     main {
         padding: 0 20px 40px;
         max-width: 500px;
-        max-height: 500px;
     }
 
     .estado-vazio {
@@ -230,9 +228,6 @@ footer {
 
     .card-conteudo {
         padding: 16px;
-        padding-bottom: 20%;
-        width: 50px;
-        height: 50px;
     }
 
     header h1 {
